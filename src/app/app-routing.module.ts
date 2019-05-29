@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: MenuPrincipalComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
