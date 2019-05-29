@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SwapiService } from '../swapi.service';
+import { Termino } from '../Termino';
 
 @Component({
   selector: 'app-menu-principal',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPrincipalComponent implements OnInit {
 
-  constructor() { }
+  terminos: Termino[] = [];
+
+  constructor(private swapi: SwapiService) { }
 
   ngOnInit() {
+    this.swapi.get('http://swapi.co/api').subscribe(
+      terminos => console.log(Object.keys(terminos), Object.values(terminos))
+    );
   }
 
 }
