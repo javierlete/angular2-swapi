@@ -15,12 +15,12 @@ export class SwapiService {
   get(url: string): Observable<any> {
     // return this.http.get(url);
     const concepto = url.split('/')[4];
-    const id = url.split('/')[5];
+    const id: number = +url.split('/')[5];
 
     switch (concepto) {
       case 'films':
         if (id) {
-          return of(peliculas[id]);
+          return of(peliculas.results[id]);
         } else {
           return of(peliculas);
         }

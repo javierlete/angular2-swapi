@@ -13,10 +13,11 @@
     <tr *ngFor="let pelicula of respuesta.results">
       <td>{{ pelicula.title }}</td>
       <td>{{ pelicula.episode_id }}</td>
-      <td>{{ pelicula.opening_crawl }}</td>
+      <td>{{ pelicula.opening_crawl.substring(0,40) }}...</td>
       <td>{{ pelicula.director }}</td>
       <td>{{ pelicula.producer }}</td>
       <td>{{ pelicula.release_date }}</td>
+      <td><a routerLink="{{ pelicula.url.split('/')[5] }}">Ver película</a></td>
     </tr>
   </tbody>
 </table>
