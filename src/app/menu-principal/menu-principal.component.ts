@@ -14,8 +14,12 @@ export class MenuPrincipalComponent implements OnInit {
   constructor(private swapi: SwapiService) { }
 
   ngOnInit() {
-    this.swapi.get('http://swapi.co/api').subscribe(
-      terminos => console.log(Object.keys(terminos), Object.values(terminos))
+    this.swapi.get('https://swapi.co/api').subscribe(
+      terminosRecibidos =>
+        // console.log(Object.keys(terminos), Object.values(terminos))
+        Object.keys(terminosRecibidos).map(
+          elemento => this.terminos.push(
+            { nombre: elemento, valor: terminosRecibidos[elemento] }))
     );
   }
 
