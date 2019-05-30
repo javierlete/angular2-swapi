@@ -23,4 +23,9 @@ export class MenuPrincipalComponent implements OnInit {
     );
   }
 
+  terminoSeleccionado(url: string): void {
+    // debugger; // Para el código en esta línea en las developer tools
+    console.log(url);
+  }
+
 }

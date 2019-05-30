@@ -1,3 +1,6 @@
 <ul>
-  <li *ngFor="let termino of terminos">{{termino.nombre}} {{termino.valor}}</li>
+  <li *ngFor="let termino of terminos">
+    <a href="#" (click)="terminoSeleccionado(termino.valor)">
+      {{ termino.nombre | titlecase }}</a>
+  </li>
 </ul>
