@@ -4,3 +4,19 @@
       {{ termino.nombre | titlecase }}</a>
   </li>
 </ul>
+
+<ul>
+  <li *ngFor="let termino of terminos">
+    <a routerLink="{{termino.nombre}}">{{ termino.nombre | titlecase }}</a>
+  </li>
+</ul>
+
+
+<ul>
+  <li><a routerLink="personas">Personas</a></li>
+  <li><a routerLink="planetas">Planetas</a></li>
+  <li><a routerLink="peliculas">Películas</a></li>
+  <li><a routerLink="especies">Especies</a></li>
+  <li><a routerLink="vehiculos">Vehículos</a></li>
+  <li><a routerLink="naves">Naves espaciales</a></li>
+</ul>

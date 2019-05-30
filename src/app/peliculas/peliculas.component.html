@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Episodio</th>
+      <th>Apertura</th>
+      <th>Director</th>
+      <th>Productor</th>
+      <th>Fecha de estreno</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pelicula of respuesta.results">
+      <td>{{ pelicula.title }}</td>
+      <td>{{ pelicula.episode_id }}</td>
+      <td>{{ pelicula.opening_crawl }}</td>
+      <td>{{ pelicula.director }}</td>
+      <td>{{ pelicula.producer }}</td>
+      <td>{{ pelicula.release_date }}</td>
+    </tr>
+  </tbody>
+</table>
