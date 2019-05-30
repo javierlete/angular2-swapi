@@ -20,7 +20,7 @@ export class SwapiService {
     switch (concepto) {
       case 'films':
         if (id) {
-          return of(peliculas.results[id]);
+          return of(peliculas.results[id-1]);
         } else {
           return of(peliculas);
         }
